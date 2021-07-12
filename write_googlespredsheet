@@ -9,6 +9,6 @@ gc = gspread.authorize(GoogleCredentials.get_application_default())
 sh = gc.create('A new spreadsheet')
 # Open our new sheet and add some data.
 wks = gc.open('A new spreadsheet').sheet1
-#write a list including real value in the sheet
+#write a list including real values in the sheet
 for i in range(len(data)):
   wks.update_cell(i+1,1, float(data[i]))
